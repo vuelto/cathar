@@ -1,0 +1,22 @@
+{
+  "name": "cathar",
+  "version": "1.0.0",
+  "description": "that feels so fucking good!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "fuck",
+    "yeah"
+  ],
+  "author": "ben@benmcgee.com",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.5.4",
+    "body-parser": "^1.18.3",
+    "csurf": "^1.9.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6"
+  }
+}

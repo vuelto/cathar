@@ -1,0 +1,57 @@
+# Create a new user
+POST https://cathar.devaddins.com/api/user
+{
+	"email": "ben@benmcgee.com", 
+	"password1": "yeah right!", 
+	"password2": "yeah right!", 
+	"aft': "bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361"
+}
+response
+
+# update the user password
+PUT https://cathar.devaddins/api/user/password
+{
+	"email": "ben@benmcgee.com", 
+	"current_password": "yeah right!", 
+	"new_password1": "P@$$W0rd1", 
+	"new_password2": "P@$$W0rd1",
+	"aft': "bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361"
+}
+response
+
+# recover the user password via email
+GET https://cathar.devaddins.com/api/user/password/ben@benmcgee.com/bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361
+response
+
+# create a new cath
+POST https://cathar.devaddins.com/api/cath
+{
+	"email":"ben@benmcgee.com", 
+	"password":"yeah right!"
+	"xpath": "//*[@id="gbw"]/div/div/div/div[4]/div/div/div[2]/div/a[1]", 
+	"text": "FUCKOFF GOOGLE!",
+	"aft': "bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361"
+}
+response
+
+# get a specific cath
+GET https://cathar.devaddins.com/api/cath/123/bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361
+response
+{
+	"xpath": "//*[@id="gbw"]/div/div/div/div[4]/div/div/div[2]/div/a[1]", 
+	"text": "FUCKOFF GOOGLE!",
+}
+
+# get all caths
+GET https://cathar.devaddins.com/api/cath/bb34bf9b-ac1c-4e0d-88e5-63f91b5ff361
+response
+[
+	{
+		"xpath": "//*[@id="gbw"]/div/div/div/div[4]/div/div/div[2]/div/a[1]", 
+		"text": "FUCKOFF GOOGLE!", 
+	}, 
+	{
+		"xpath": "//*[@id="gbw"]/div/div/div/div[4]/div/div/div[2]/div/a[1]", 
+		"text": "Go Aways!",
+	}
+]
